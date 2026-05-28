@@ -1,0 +1,188 @@
+{
+  "source_path": "C:\\Users\\GuuFo\\Documents\\ETL\\test_files\\srcfiles\\client_beta_balanced_portfolio.xlsx",
+  "output_path": "test_files\\outfiles\\client_beta_balanced_portfolio.4679a1c2d0.json",
+  "file_name": "client_beta_balanced_portfolio.xlsx",
+  "extension": ".xlsx",
+  "status": "ok",
+  "content": {
+    "kind": "workbook",
+    "sheets": {
+      "ClientInfo": [
+        [
+          "Field",
+          "Value"
+        ],
+        [
+          "ClientID",
+          "CL-1002"
+        ],
+        [
+          "ClientName",
+          "Beta Balanced Super"
+        ],
+        [
+          "Adviser",
+          "S. Patel"
+        ],
+        [
+          "RiskProfile",
+          "Balanced"
+        ],
+        [
+          "BaseCurrency",
+          "AUD"
+        ],
+        [
+          "ReviewDate",
+          "2026-05-17T00:00:00"
+        ]
+      ],
+      "Holdings": [
+        [
+          "AccountNo",
+          "AssetClass",
+          "Ticker",
+          "ISIN",
+          "SecurityName",
+          "Quantity",
+          "Price",
+          "MarketValue",
+          "CostBase",
+          "Currency"
+        ],
+        [
+          "B-8101",
+          "ETF",
+          "VGS.AX",
+          "AU000000VGS8",
+          "Vanguard MSCI Index International Shares ETF",
+          300,
+          129.1,
+          38730,
+          35200,
+          "AUD"
+        ],
+        [
+          "B-8101",
+          "Fixed Income",
+          "VAF.AX",
+          "AU000000VAF4",
+          "Vanguard Australian Fixed Interest ETF",
+          540,
+          45.3,
+          24462,
+          25100,
+          "AUD"
+        ],
+        [
+          "B-8101",
+          "Australian Equity",
+          "TLS.AX",
+          "AU000000TLS2",
+          "Telstra Group Ltd",
+          2100,
+          3.92,
+          8232,
+          7700,
+          "AUD"
+        ],
+        [
+          "B-8102",
+          "Cash Fund",
+          "AAA.AX",
+          "AU00000AAA06",
+          "Betashares Australian High Interest Cash ETF",
+          180,
+          50.08,
+          9014.4,
+          9000,
+          "AUD"
+        ]
+      ],
+      "Transactions": [
+        [
+          "TradeDate",
+          "AccountNo",
+          "Type",
+          "Ticker",
+          "Quantity",
+          "Price",
+          "GrossAmount",
+          "Fees",
+          "NetAmount",
+          "Currency"
+        ],
+        [
+          "2026-01-20T00:00:00",
+          "B-8101",
+          "Buy",
+          "VAF.AX",
+          100,
+          45.8,
+          4580,
+          12,
+          4592,
+          "AUD"
+        ],
+        [
+          "2026-03-28T00:00:00",
+          "B-8101",
+          "Sell",
+          "TLS.AX",
+          400,
+          4.05,
+          1620,
+          12,
+          1608,
+          "AUD"
+        ],
+        [
+          "2026-04-30T00:00:00",
+          "B-8102",
+          "Distribution",
+          "AAA.AX",
+          null,
+          null,
+          91.2,
+          0,
+          91.2,
+          "AUD"
+        ]
+      ],
+      "Cash": [
+        [
+          "AccountNo",
+          "Currency",
+          "CashBalance"
+        ],
+        [
+          "B-8101",
+          "AUD",
+          6740.25
+        ],
+        [
+          "B-8102",
+          "AUD",
+          1200
+        ]
+      ],
+      "Notes": [
+        [
+          "Severity",
+          "Issue",
+          "Detail"
+        ],
+        [
+          "Info",
+          "Balanced allocation",
+          "Includes fixed income, equity, ETF, and cash fund positions"
+        ]
+      ]
+    }
+  },
+  "metadata": {
+    "size_bytes": 10799,
+    "modified_epoch": 1779950268.5023224
+  },
+  "error": null
+}

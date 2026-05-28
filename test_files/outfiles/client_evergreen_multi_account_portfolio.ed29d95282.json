@@ -1,0 +1,193 @@
+{
+  "source_path": "C:\\Users\\GuuFo\\Documents\\ETL\\test_files\\srcfiles\\client_evergreen_multi_account_portfolio.xlsx",
+  "output_path": "test_files\\outfiles\\client_evergreen_multi_account_portfolio.ed29d95282.json",
+  "file_name": "client_evergreen_multi_account_portfolio.xlsx",
+  "extension": ".xlsx",
+  "status": "ok",
+  "content": {
+    "kind": "workbook",
+    "sheets": {
+      "ClientInfo": [
+        [
+          "Field",
+          "Value"
+        ],
+        [
+          "ClientID",
+          "CL-1005"
+        ],
+        [
+          "ClientName",
+          "Evergreen Charitable Foundation"
+        ],
+        [
+          "Adviser",
+          "A. Rossi"
+        ],
+        [
+          "RiskProfile",
+          "Conservative"
+        ],
+        [
+          "BaseCurrency",
+          "AUD"
+        ],
+        [
+          "ReviewDate",
+          "2026-05-22T00:00:00"
+        ]
+      ],
+      "Holdings": [
+        [
+          "AccountNo",
+          "AssetClass",
+          "Ticker",
+          "ISIN",
+          "SecurityName",
+          "Quantity",
+          "Price",
+          "MarketValue",
+          "CostBase",
+          "Currency"
+        ],
+        [
+          "E-3301",
+          "ETF",
+          "VDHG.AX",
+          "AU00000VDHG9",
+          "Vanguard Diversified High Growth ETF",
+          150,
+          67.25,
+          10087.5,
+          9900,
+          "AUD"
+        ],
+        [
+          "E-3301",
+          "Fixed Income",
+          "VBND.AX",
+          "AU00000VBND0",
+          "Vanguard Global Aggregate Bond Index ETF",
+          600,
+          47.15,
+          28290,
+          29100,
+          "AUD"
+        ],
+        [
+          "E-3302",
+          "Cash Fund",
+          "BILL.AX",
+          "AU00000BILL4",
+          "iShares Core Cash ETF",
+          500,
+          100.21,
+          50105,
+          50000,
+          "AUD"
+        ],
+        [
+          "E-3303",
+          "International Equity",
+          "GOOGL",
+          "US02079K3059",
+          "Alphabet Inc Class A",
+          25,
+          173.6,
+          4340,
+          4100,
+          "USD"
+        ]
+      ],
+      "Transactions": [
+        [
+          "TradeDate",
+          "AccountNo",
+          "Type",
+          "Ticker",
+          "Quantity",
+          "Price",
+          "GrossAmount",
+          "Fees",
+          "NetAmount",
+          "Currency"
+        ],
+        [
+          "2026-01-05T00:00:00",
+          "E-3301",
+          "Buy",
+          "VBND.AX",
+          200,
+          48.2,
+          9640,
+          12,
+          9652,
+          "AUD"
+        ],
+        [
+          "2026-03-31T00:00:00",
+          "E-3302",
+          "Distribution",
+          "BILL.AX",
+          null,
+          null,
+          310.44,
+          0,
+          310.44,
+          "AUD"
+        ],
+        [
+          "2026-05-05T00:00:00",
+          "E-3303",
+          "FX Transfer",
+          "USD",
+          null,
+          null,
+          5000,
+          0,
+          5000,
+          "USD"
+        ]
+      ],
+      "Cash": [
+        [
+          "AccountNo",
+          "Currency",
+          "CashBalance"
+        ],
+        [
+          "E-3301",
+          "AUD",
+          980.44
+        ],
+        [
+          "E-3302",
+          "AUD",
+          640.1
+        ],
+        [
+          "E-3303",
+          "USD",
+          512.9
+        ]
+      ],
+      "Notes": [
+        [
+          "Severity",
+          "Issue",
+          "Detail"
+        ],
+        [
+          "Info",
+          "Multi-account file",
+          "Conservative foundation with three account numbers and cross-currency cash"
+        ]
+      ]
+    }
+  },
+  "metadata": {
+    "size_bytes": 10864,
+    "modified_epoch": 1779950268.5835927
+  },
+  "error": null
+}

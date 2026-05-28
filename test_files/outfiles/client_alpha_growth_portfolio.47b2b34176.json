@@ -1,0 +1,188 @@
+{
+  "source_path": "C:\\Users\\GuuFo\\Documents\\ETL\\test_files\\srcfiles\\client_alpha_growth_portfolio.xlsx",
+  "output_path": "test_files\\outfiles\\client_alpha_growth_portfolio.47b2b34176.json",
+  "file_name": "client_alpha_growth_portfolio.xlsx",
+  "extension": ".xlsx",
+  "status": "ok",
+  "content": {
+    "kind": "workbook",
+    "sheets": {
+      "ClientInfo": [
+        [
+          "Field",
+          "Value"
+        ],
+        [
+          "ClientID",
+          "CL-1001"
+        ],
+        [
+          "ClientName",
+          "Alpha Growth Trust"
+        ],
+        [
+          "Adviser",
+          "M. Chen"
+        ],
+        [
+          "RiskProfile",
+          "Growth"
+        ],
+        [
+          "BaseCurrency",
+          "AUD"
+        ],
+        [
+          "ReviewDate",
+          "2026-05-15T00:00:00"
+        ]
+      ],
+      "Holdings": [
+        [
+          "AccountNo",
+          "AssetClass",
+          "Ticker",
+          "ISIN",
+          "SecurityName",
+          "Quantity",
+          "Price",
+          "MarketValue",
+          "CostBase",
+          "Currency"
+        ],
+        [
+          "A-7001",
+          "Australian Equity",
+          "BHP.AX",
+          "AU000000BHP4",
+          "BHP Group Ltd",
+          420,
+          45.8,
+          19236,
+          15700,
+          "AUD"
+        ],
+        [
+          "A-7001",
+          "Australian Equity",
+          "CBA.AX",
+          "AU000000CBA7",
+          "Commonwealth Bank of Australia",
+          110,
+          121.4,
+          13354,
+          10250,
+          "AUD"
+        ],
+        [
+          "A-7001",
+          "ETF",
+          "VAS.AX",
+          "AU000000VAS1",
+          "Vanguard Australian Shares ETF",
+          250,
+          99.7,
+          24925,
+          23100,
+          "AUD"
+        ],
+        [
+          "A-7002",
+          "International Equity",
+          "AAPL",
+          "US0378331005",
+          "Apple Inc",
+          40,
+          190.2,
+          7608,
+          6850,
+          "USD"
+        ]
+      ],
+      "Transactions": [
+        [
+          "TradeDate",
+          "AccountNo",
+          "Type",
+          "Ticker",
+          "Quantity",
+          "Price",
+          "GrossAmount",
+          "Fees",
+          "NetAmount",
+          "Currency"
+        ],
+        [
+          "2026-01-12T00:00:00",
+          "A-7001",
+          "Buy",
+          "VAS.AX",
+          50,
+          96.1,
+          4805,
+          14.95,
+          4819.95,
+          "AUD"
+        ],
+        [
+          "2026-02-18T00:00:00",
+          "A-7001",
+          "Dividend",
+          "BHP.AX",
+          null,
+          null,
+          462,
+          0,
+          462,
+          "AUD"
+        ],
+        [
+          "2026-04-03T00:00:00",
+          "A-7002",
+          "Buy",
+          "AAPL",
+          10,
+          184.3,
+          1843,
+          9.99,
+          1852.99,
+          "USD"
+        ]
+      ],
+      "Cash": [
+        [
+          "AccountNo",
+          "Currency",
+          "CashBalance"
+        ],
+        [
+          "A-7001",
+          "AUD",
+          18542.55
+        ],
+        [
+          "A-7002",
+          "USD",
+          2310.12
+        ]
+      ],
+      "Notes": [
+        [
+          "Severity",
+          "Issue",
+          "Detail"
+        ],
+        [
+          "Info",
+          "Clean file",
+          "Typical growth client with AUD and USD assets"
+        ]
+      ]
+    }
+  },
+  "metadata": {
+    "size_bytes": 10760,
+    "modified_epoch": 1779950268.476817
+  },
+  "error": null
+}

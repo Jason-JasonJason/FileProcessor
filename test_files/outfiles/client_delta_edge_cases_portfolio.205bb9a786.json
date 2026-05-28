@@ -1,0 +1,198 @@
+{
+  "source_path": "C:\\Users\\GuuFo\\Documents\\ETL\\test_files\\srcfiles\\client_delta_edge_cases_portfolio.xlsx",
+  "output_path": "test_files\\outfiles\\client_delta_edge_cases_portfolio.205bb9a786.json",
+  "file_name": "client_delta_edge_cases_portfolio.xlsx",
+  "extension": ".xlsx",
+  "status": "ok",
+  "content": {
+    "kind": "workbook",
+    "sheets": {
+      "ClientInfo": [
+        [
+          "Field",
+          "Value"
+        ],
+        [
+          "ClientID",
+          "CL-1004"
+        ],
+        [
+          "ClientName",
+          "Delta Family Office"
+        ],
+        [
+          "Adviser",
+          "R. Osei"
+        ],
+        [
+          "RiskProfile",
+          "High Growth"
+        ],
+        [
+          "BaseCurrency",
+          "AUD"
+        ],
+        [
+          "ReviewDate",
+          "2026-05-21T00:00:00"
+        ]
+      ],
+      "Holdings": [
+        [
+          "AccountNo",
+          "AssetClass",
+          "Ticker",
+          "ISIN",
+          "SecurityName",
+          "Quantity",
+          "Price",
+          "MarketValue",
+          "CostBase",
+          "Currency"
+        ],
+        [
+          "D-1101",
+          "International Equity",
+          "MSFT",
+          "US5949181045",
+          "Microsoft Corp",
+          55,
+          428.1,
+          23545.5,
+          18800,
+          "USD"
+        ],
+        [
+          "D-1101",
+          "International Equity",
+          null,
+          "US88160R1014",
+          "Tesla Inc",
+          12,
+          177.8,
+          2133.6,
+          3900,
+          "USD"
+        ],
+        [
+          "D-1101",
+          "Australian Equity",
+          "NAB.AX",
+          "AU000000NAB4",
+          "National Australia Bank Ltd",
+          0,
+          35.2,
+          0,
+          5200,
+          "AUD"
+        ],
+        [
+          "D-1102",
+          "Alternatives",
+          "PE-FUND-07",
+          null,
+          "Private Equity Fund VII",
+          1,
+          null,
+          null,
+          75000,
+          "AUD"
+        ]
+      ],
+      "Transactions": [
+        [
+          "TradeDate",
+          "AccountNo",
+          "Type",
+          "Ticker",
+          "Quantity",
+          "Price",
+          "GrossAmount",
+          "Fees",
+          "NetAmount",
+          "Currency"
+        ],
+        [
+          "not-a-date",
+          "D-1101",
+          "Buy",
+          "MSFT",
+          15,
+          402.5,
+          6037.5,
+          19.95,
+          6057.45,
+          "USD"
+        ],
+        [
+          "2026-03-10T00:00:00",
+          "D-1101",
+          "Buy",
+          null,
+          12,
+          177.8,
+          2133.6,
+          19.95,
+          2153.55,
+          "USD"
+        ],
+        [
+          "2026-04-22T00:00:00",
+          "D-1102",
+          "Capital Call",
+          "PE-FUND-07",
+          null,
+          null,
+          25000,
+          0,
+          25000,
+          "AUD"
+        ]
+      ],
+      "Cash": [
+        [
+          "AccountNo",
+          "Currency",
+          "CashBalance"
+        ],
+        [
+          "D-1101",
+          "USD",
+          -425.4
+        ],
+        [
+          "D-1102",
+          "AUD",
+          0
+        ]
+      ],
+      "Notes": [
+        [
+          "Severity",
+          "Issue",
+          "Detail"
+        ],
+        [
+          "Warning",
+          "Missing ticker",
+          "Tesla row has ISIN but blank ticker"
+        ],
+        [
+          "Warning",
+          "Bad date",
+          "First transaction uses text instead of a date"
+        ],
+        [
+          "Warning",
+          "Null value",
+          "Private equity valuation price and market value are blank"
+        ]
+      ]
+    }
+  },
+  "metadata": {
+    "size_bytes": 10869,
+    "modified_epoch": 1779950268.5565882
+  },
+  "error": null
+}

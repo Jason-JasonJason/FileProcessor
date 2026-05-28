@@ -1,0 +1,183 @@
+{
+  "source_path": "C:\\Users\\GuuFo\\Documents\\ETL\\test_files\\srcfiles\\client_carrington_income_portfolio.xlsx",
+  "output_path": "test_files\\outfiles\\client_carrington_income_portfolio.42eb3c2b2f.json",
+  "file_name": "client_carrington_income_portfolio.xlsx",
+  "extension": ".xlsx",
+  "status": "ok",
+  "content": {
+    "kind": "workbook",
+    "sheets": {
+      "ClientInfo": [
+        [
+          "Field",
+          "Value"
+        ],
+        [
+          "ClientID",
+          "CL-1003"
+        ],
+        [
+          "ClientName",
+          "Carrington Income Account"
+        ],
+        [
+          "Adviser",
+          "L. Nguyen"
+        ],
+        [
+          "RiskProfile",
+          "Income"
+        ],
+        [
+          "BaseCurrency",
+          "AUD"
+        ],
+        [
+          "ReviewDate",
+          "2026-05-20T00:00:00"
+        ]
+      ],
+      "Holdings": [
+        [
+          "AccountNo",
+          "AssetClass",
+          "Ticker",
+          "ISIN",
+          "SecurityName",
+          "Quantity",
+          "Price",
+          "MarketValue",
+          "CostBase",
+          "Currency"
+        ],
+        [
+          "C-9201",
+          "Fixed Income",
+          "IAF.AX",
+          "AU000000IAF9",
+          "iShares Core Composite Bond ETF",
+          800,
+          104.2,
+          83360,
+          82000,
+          "AUD"
+        ],
+        [
+          "C-9201",
+          "Listed Property",
+          "VAP.AX",
+          "AU000000VAP1",
+          "Vanguard Australian Property Securities Index ETF",
+          220,
+          84.7,
+          18634,
+          19600,
+          "AUD"
+        ],
+        [
+          "C-9201",
+          "Australian Equity",
+          "WES.AX",
+          "AU000000WES1",
+          "Wesfarmers Ltd",
+          75,
+          67.5,
+          5062.5,
+          4200,
+          "AUD"
+        ],
+        [
+          "C-9201",
+          "Term Deposit",
+          "TD-ANZ-0626",
+          null,
+          "ANZ Term Deposit Jun 2026",
+          1,
+          50000,
+          50000,
+          50000,
+          "AUD"
+        ]
+      ],
+      "Transactions": [
+        [
+          "TradeDate",
+          "AccountNo",
+          "Type",
+          "Ticker",
+          "Quantity",
+          "Price",
+          "GrossAmount",
+          "Fees",
+          "NetAmount",
+          "Currency"
+        ],
+        [
+          "2026-02-01T00:00:00",
+          "C-9201",
+          "Interest",
+          "TD-ANZ-0626",
+          null,
+          null,
+          687.5,
+          0,
+          687.5,
+          "AUD"
+        ],
+        [
+          "2026-02-15T00:00:00",
+          "C-9201",
+          "Dividend",
+          "WES.AX",
+          null,
+          null,
+          78.75,
+          0,
+          78.75,
+          "AUD"
+        ],
+        [
+          "2026-05-01T00:00:00",
+          "C-9201",
+          "Buy",
+          "IAF.AX",
+          120,
+          103.8,
+          12456,
+          14.95,
+          12470.95,
+          "AUD"
+        ]
+      ],
+      "Cash": [
+        [
+          "AccountNo",
+          "Currency",
+          "CashBalance"
+        ],
+        [
+          "C-9201",
+          "AUD",
+          3844.8
+        ]
+      ],
+      "Notes": [
+        [
+          "Severity",
+          "Issue",
+          "Detail"
+        ],
+        [
+          "Info",
+          "Income-oriented client",
+          "Contains a non-listed term deposit style holding"
+        ]
+      ]
+    }
+  },
+  "metadata": {
+    "size_bytes": 10768,
+    "modified_epoch": 1779950268.5285907
+  },
+  "error": null
+}

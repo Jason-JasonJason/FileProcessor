@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import json
 import xml.etree.ElementTree as ET
+from datetime import date, datetime, time
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Callable
@@ -89,10 +90,16 @@ def extract_xlsx(path: Path) -> dict[str, Any]:
     for worksheet in workbook.worksheets:
         rows = []
         for row in worksheet.iter_rows(values_only=True):
-            rows.append(list(row))
+            rows.append([normalize_excel_cell(cell) for cell in row])
         sheets[worksheet.title] = rows
     workbook.close()
     return {"kind": "workbook", "sheets": sheets}
+
+
+def normalize_excel_cell(value: Any) -> Any:
+    if isinstance(value, (datetime, date, time)):
+        return value.isoformat()
+    return value
 
 
 def extract_docx(path: Path) -> dict[str, Any]:
