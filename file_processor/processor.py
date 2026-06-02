@@ -24,10 +24,10 @@ class ProcessingResult:
         return asdict(self)
 
 
-def process_file(path: Path, output_dir: Path) -> ProcessingResult:
+def process_file(path: Path, output_dir: Path, write_json: bool = True) -> ProcessingResult:
     path = path.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
-    output_path = output_dir / f"{path.stem}.{short_hash(path)}.json"
+    output_path = output_dir / f"{path.stem}.{short_hash(path)}.json" if write_json else None
     metadata = build_metadata(path)
 
     try:
@@ -54,11 +54,17 @@ def process_file(path: Path, output_dir: Path) -> ProcessingResult:
             metadata=metadata,
         )
 
-    output_path.write_text(json.dumps(result.to_dict(), indent=2, ensure_ascii=False), encoding="utf-8")
+    if write_json and output_path is not None:
+        output_path.write_text(json.dumps(result.to_dict(), indent=2, ensure_ascii=False), encoding="utf-8")
     return result
 
 
-def process_folder(input_dir: Path, output_dir: Path, recursive: bool = False) -> list[ProcessingResult]:
+def process_folder(
+    input_dir: Path,
+    output_dir: Path,
+    recursive: bool = False,
+    write_json: bool = True,
+) -> list[ProcessingResult]:
     if not input_dir.exists():
         raise FileNotFoundError(f"Input folder does not exist: {input_dir}")
     if not input_dir.is_dir():
@@ -70,7 +76,7 @@ def process_folder(input_dir: Path, output_dir: Path, recursive: bool = False) -
         path for path in input_dir.glob(pattern)
         if path.is_file() and path.suffix.lower() in extensions
     )
-    return [process_file(path, output_dir) for path in files]
+    return [process_file(path, output_dir, write_json=write_json) for path in files]
 
 
 def build_metadata(path: Path) -> dict[str, Any]:
