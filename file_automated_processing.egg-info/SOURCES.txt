@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+file_automated_processing.egg-info/PKG-INFO
+file_automated_processing.egg-info/SOURCES.txt
+file_automated_processing.egg-info/dependency_links.txt
+file_automated_processing.egg-info/entry_points.txt
+file_automated_processing.egg-info/requires.txt
+file_automated_processing.egg-info/top_level.txt
+file_processor/__init__.py
+file_processor/__main__.py
+file_processor/cli.py
+file_processor/extractors.py
+file_processor/processor.py
+file_processor/tabular.py
+tests/test_processor.py

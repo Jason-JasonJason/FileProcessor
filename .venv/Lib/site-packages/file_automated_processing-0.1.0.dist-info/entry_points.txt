@@ -1,0 +1,2 @@
+[console_scripts]
+file-process = file_processor.cli:main

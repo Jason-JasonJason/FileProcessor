@@ -21,3 +21,7 @@ file-process = "file_processor.cli:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+include = ["file_processor*"]
+exclude = ["tests*", "test_files*"]

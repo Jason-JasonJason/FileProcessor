@@ -23,6 +23,20 @@ pip install -r requirements.txt
 python -m file_processor process .\input .\output
 ```
 
+The Office/PDF extractors depend on these third-party packages:
+
+- Excel `.xlsx` / `.xlsm`: install package `openpyxl`, import name `openpyxl`
+- Word `.docx`: install package `python-docx`, import name `docx`
+- PowerPoint `.pptx`: install package `python-pptx`, import name `pptx`
+- PDF `.pdf`: install package `pypdf`, import name `pypdf`
+
+If you are using the project as an installable package instead of
+`requirements.txt`, install the project dependencies with:
+
+```powershell
+pip install -e .
+```
+
 Each processed file produces a JSON output containing:
 
 - source path
