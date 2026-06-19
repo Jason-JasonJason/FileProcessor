@@ -55,9 +55,13 @@ def extract_json(path: Path) -> dict[str, Any]:
 
 def extract_csv(path: Path, delimiter: str = ",") -> dict[str, Any]:
     with path.open("r", encoding="utf-8-sig", newline="") as file:
-        sample = file.read(4096)
-        file.seek(0)
+        sample = file.read(4096) # Reads the first 4096 char to figure out what's the delimiter
+        file.seek(0) # move csv reader back to pos 0
+        # csv.sniffer guess the file format
         dialect = csv.Sniffer().sniff(sample, delimiters=",\t;|") if sample.strip() else None
+        # Creates a CSV reader that reads each row as a dictionary. 
+        # If dialect was successfully guessed, it uses that guessed format.
+        # If not, it falls back to the delimiter argument from the function.
         reader = csv.DictReader(file, dialect=dialect) if dialect else csv.DictReader(file, delimiter=delimiter)
         rows = list(reader)
     return {"kind": "table", "rows": rows, "row_count": len(rows)}

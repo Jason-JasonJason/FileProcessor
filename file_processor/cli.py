@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from .extractors import supported_extensions
+from .pipelines.online_retail import OnlineRetailReportConfig, build_online_retail_report
 from .processor import process_folder
 from .tabular import TABULAR_OUTPUT_FORMATS, write_tabular_outputs
 
@@ -37,6 +38,19 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     subparsers.add_parser("formats", help="Print supported file extensions.")
+
+    retail = subparsers.add_parser(
+        "online-retail-report",
+        help="Build the demo ecommerce business report from an Online Retail Excel workbook.",
+    )
+    retail.add_argument("input_file", type=Path, help="Path to Online Retail.xlsx.")
+    retail.add_argument("output_file", type=Path, help="Path where the report workbook should be written.")
+    retail.add_argument(
+        "--cleaned-transaction-limit",
+        type=int,
+        default=50_000,
+        help="Maximum rows to write to the Cleaned Transactions sheet. Use -1 for no limit.",
+    )
     return parser
 
 
@@ -47,6 +61,18 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "formats":
         for extension in supported_extensions():
             print(extension)
+        return 0
+
+    if args.command == "online-retail-report":
+        limit = None if args.cleaned_transaction_limit < 0 else args.cleaned_transaction_limit
+        output_path = build_online_retail_report(
+            OnlineRetailReportConfig(
+                input_path=args.input_file,
+                output_path=args.output_file,
+                cleaned_transaction_limit=limit,
+            )
+        )
+        print(f"Wrote {output_path}")
         return 0
 
     results = process_folder(

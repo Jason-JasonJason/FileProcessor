@@ -48,6 +48,36 @@ Each processed file produces a JSON output containing:
 
 ## Examples
 
+### Portfolio demo: Excel sales report
+
+The first polished demo is an Excel-to-Excel retail reporting pipeline using
+the UCI Online Retail dataset.
+
+Input:
+
+```text
+examples/online_retail_excel/input/Online Retail.xlsx
+```
+
+Output:
+
+```text
+examples/online_retail_excel/output/online_retail_business_report.xlsx
+```
+
+Run it with:
+
+```powershell
+python -m file_processor online-retail-report `
+  "examples/online_retail_excel/input/Online Retail.xlsx" `
+  "examples/online_retail_excel/output/online_retail_business_report.xlsx"
+```
+
+See `examples/online_retail_excel/README.md` for the demo story and report
+sheets.
+
+For a deeper engineering walkthrough, see `docs/technical-design.md`.
+
 Process every supported file in a folder:
 
 ```powershell
